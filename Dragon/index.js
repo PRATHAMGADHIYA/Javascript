@@ -1,47 +1,47 @@
-let users=[]
+let users = []
 
-const handleSalesData =(number,name,price)=>{
-    let tr=document.createElement('tr');
-    let td1=document.createElement('td');
-    let td2=document.createElement('td');
-    let td3=document.createElement('td');
-
-    td1.innerHTML=number;
-    td2.innerHTML=name;
-    td3.innerHTML=price;
-    tr.append(td1,td2,td3);
-
-    document.getElementById('tbody').append(tr);
-
+const userdelete = (index) => {
+    users.splice(index, 1);
+}
+const idmaker = () => {
 
     for (let i = 0; i < users.length; i++) {
+        document.getElementById("tbody").innerHTML = ""
+
         let tr = document.createElement('tr')
+
+        let td = document.createElement('td')
+        td.innerHTML = i + 1
 
         let td1 = document.createElement('td')
         td1.innerHTML = users[i].number
 
         let td2 = document.createElement('td')
-        td2.innerHTML = users[i].name        
+        td2.innerHTML = users[i].name
 
         let td3 = document.createElement('td')
         td3.innerHTML = users[i].price
-    }
 
+        let td4 = document.createElement('td');
+        td4.innerHTML = "Delete";
+        td4.addEventListener('click', () => userdelete(i))
 
-    const salaesdata=(e)=>{
-        e.preventDefault();
-        
-        let Number = document.getElementById('Number').value;
-        let name = document.getElementById('name').value;
-        let price = document.getElementById('price').value;
-      
-        let user = {
-            number: number,
-            name: name,
-            price: price,
-        }
-        
-        users.push(user);
-        console.log(users); 
+        tr.append(td, td1, td2, td3, td4);
+        tbody.append(tr);
     }
 }
+
+const salesdata = (e) => {
+    e.preventDefault();
+
+    let user = {
+        number: document.getElementById('number').value,
+        name: document.getElementById('name').value,
+        price: document.getElementById('price').value,
+    }
+    users.push(user);
+    console.log(users);
+    idmaker();
+}
+document.getElementById('Salesdata').addEventListener('submit', salesdata)
+

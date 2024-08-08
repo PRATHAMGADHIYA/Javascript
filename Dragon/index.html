@@ -11,12 +11,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+
     <div class="dragon">
         <img src="./img/d1.jpg" alt="">
     </div>
 
-    <form action="" class="form">
+    <form class="form" id="Salesdata">
         <label class="lb">
             Sr no:
         </label><br>
@@ -30,10 +30,11 @@
         </label><br>
         <input type="text" id="price" class="input" placeholder="Enter the price:"><br>
 
-        <input type="submit" id="result">
+        <input type="submit" id="submit" class="btn">
     </form>
 
-    <table class="table">
+    
+    <table class="table ">
         <thead>
             <tr>
                 <th>Sr.no</th>
@@ -41,6 +42,7 @@
                 <th>Price</th>
             </tr>
         </thead>
+        <tbody id="tbody"></tbody>
     </table>
 </body>
 <script src="./index.js"></script>
