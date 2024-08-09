@@ -1,18 +1,15 @@
 const storeData = (e) => {
-
-    e.preventDefault();
+    e.preventDefault(); 
 
     let name = document.getElementById('name').value;
     let age = document.getElementById('age').value;
     let email = document.getElementById('email').value;
+    let phone = document.getElementById('phone').value;
+
     localStorage.setItem('name', name);
     localStorage.setItem('age', age);
     localStorage.setItem('email', email);
-    displayData();
-    alert('Data stored successfully');
-    document.getElementById('name').value = '';
-    document.getElementById('age').value = '';
-    document.getElementById('email').value = '';
+    localStorage.setItem('phone', phone);
+
+    alert('Data stored successfully!');
 }
-
-
