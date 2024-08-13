@@ -11,14 +11,14 @@
 </head>
 
 <body class="container">
-    <form class="form" onsubmit="storeData(event)">
+    <form class="form">
         <h2 class="text">Local Storage</h2>
 
         <div class="mb-3">
             <label for="name" class="form-label">Name:</label>
             <input type="text" id="name" name="name" class="form-control">
         </div>
-
+         
         <div class="mb-3">
             <label for="age" class="form-label">Age:</label>
             <input type="number" id="age" name="age" class="form-control">
@@ -36,6 +36,20 @@
 
         <button type="submit" class="btn btn-secondary mt-0">Save</button>
     </form>
+
+    <div class="main">
+        <div class="item">
+            <span>x</span>
+            <h5>Name</h5>
+            <div>abc</div>
+            <h5>Age</h5>
+            <div>0-20</div>
+            <h5>email</h5>
+            <div>t@gmail.com</div>
+            <h5>phone</h5>
+            <div>1234567890</div>
+        </div>
+    </div>
 
     <script src="./index.js"></script>
 </body>

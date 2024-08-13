@@ -2,11 +2,12 @@ let users = []
 
 const userdelete = (index) => {
     users.splice(index, 1);
+    idmaker();
 }
 const idmaker = () => {
 
+    document.getElementById("tbody").innerHTML = ""
     for (let i = 0; i < users.length; i++) {
-        document.getElementById("tbody").innerHTML = ""
 
         let tr = document.createElement('tr')
 
@@ -20,13 +21,16 @@ const idmaker = () => {
         td2.innerHTML = users[i].name
 
         let td3 = document.createElement('td')
-        td3.innerHTML = users[i].price
+        td3.innerHTML = users[i].url
 
-        let td4 = document.createElement('td');
-        td4.innerHTML = "Delete";
-        td4.addEventListener('click', () => userdelete(i))
+        let td4 = document.createElement('td')
+        td4.innerHTML = users[i].price
 
-        tr.append(td, td1, td2, td3, td4);
+        let td5 = document.createElement('td');
+        td5.innerHTML = "Delete";
+        td5.addEventListener('click', () => userdelete(i))
+
+        tr.append(td, td1, td2, td3, td4, td5);
         tbody.append(tr);
     }
 }
@@ -37,6 +41,7 @@ const salesdata = (e) => {
     let user = {
         number: document.getElementById('number').value,
         name: document.getElementById('name').value,
+        url: document.getElementById('url').value,
         price: document.getElementById('price').value,
     }
     users.push(user);

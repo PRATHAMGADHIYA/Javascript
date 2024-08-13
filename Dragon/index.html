@@ -17,8 +17,9 @@
     </div>
 
     <form class="form" id="Salesdata">
+        <h2>Toy Detail</h2>
         <label class="lb">
-            Sr no:
+            Label No:
         </label><br>
         <input type="text" id="number" class="input" placeholder="Enter the No:"><br>
         <label class="lb">
@@ -26,20 +27,28 @@
         </label><br>
         <input type="text" id="name" class="input" placeholder="Enter the Name:"><br>
         <label class="lb">
+            Toy image:
+        </label><br>
+        <input type="text" id="url" class="input" placeholder="Enter image url:"><br>
+        <label class="lb">
             Toy price:
         </label><br>
         <input type="text" id="price" class="input" placeholder="Enter the price:"><br>
 
-        <input type="submit" id="submit" class="btn">
+        <input type="submit" id="submit" class="bt">
     </form>
+    
 
     
-    <table class="table ">
+    <table class="container table table-hover table-bordered mt-5">
         <thead>
             <tr>
                 <th>Sr.no</th>
+                <th>Label No:</th>
                 <th>Name</th>
+                <th>Img Url</th>
                 <th>Price</th>
+                <th>Delete</th>
             </tr>
         </thead>
         <tbody id="tbody"></tbody>
