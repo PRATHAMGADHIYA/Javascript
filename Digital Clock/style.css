@@ -11,11 +11,12 @@ body{
     background-color: black;
 }
 .clock{
-    border: 1px solid #606066;
+    border: 10px solid #606066;
     color: white;
     padding: 40px;
     border-radius: 10px;
     background-color: #222222;
+    box-shadow: 0px 0px 20px 20px;
 }
 #Date{
     font-size: 20px;
