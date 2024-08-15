@@ -33,7 +33,7 @@ let uimaker = () => {
         data += `<div class="item">
             <span onclick="removeData(${index})">&times;</span>
     
-            <h5>Name</h5>
+            <h5>Name/</h5>
             <div>${element.name}</div>
     
             <h5>Age</h5>
