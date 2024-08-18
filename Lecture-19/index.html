@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</head>
+<!-- css start -->
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #8e47ad;
+        color: #ffffff;
+        font-family: sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        overflow: hidden;
+        margin: 0;
+    }
+
+    .container-counter {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin: 30px 50px;
+        width: 300px;
+        height: 400px;
+        gap: 2px;
+        background-color:black;
+        border-radius: 20px;
+        box-shadow: 0px 0px 20px 0px #000000;
+    }
+
+    .counter {
+        font-size: 60px;
+        margin-top: 10px;
+    }
+
+    .container-counter i {
+        font-size: 50px;
+    }
+
+    .container-counter span {
+        font-size: 40px;
+    }
+</style>
+<!-- css end -->
+
+<body>
+    <div class="container-counter">
+        <i class="bi bi-facebook"></i>
+        <div class="counter" data-target="500"></div>
+        <span>Facebook</span>
+    </div>
+
+    <div class="container-counter">
+        <i class="bi bi-instagram"></i>
+        <div class="counter" data-target="1040"></div>
+        <span>Instagram</span>
+    </div>
+
+    <div class="container-counter">
+        <i class="bi bi-youtube"></i>
+        <div class="counter" data-target="770"></div>
+        <span>Twitter</span>
+    </div>
+
+    <div class="container-counter">
+        <i class="bi bi-twitter-x"></i>
+        <div class="counter" data-target="530"></div>
+        <span>Twitter</span>
+    </div>
+</body>
+<script src="./index.js"></script>
+
+</html>
