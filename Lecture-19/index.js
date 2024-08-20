@@ -109,7 +109,3 @@ counters4.forEach(counter => {
     incrementcounter();
 
 });
-
-
-
-
