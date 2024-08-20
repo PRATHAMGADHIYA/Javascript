@@ -13,7 +13,7 @@ counters.forEach(counter => {
 
     const incrementcounter = () => {
         if (count < target) {
-            count++;
+            count += 1;
             counter.innerText = count;
             setInterval(incrementcounter, 100)
         }
@@ -41,7 +41,7 @@ counters2.forEach(counter => {
 
     const incrementcounter = () => {
         if (count < target) {
-            count++;
+            count += 1;
             counter.innerText = count;
             setInterval(incrementcounter, 300)
         }
@@ -69,7 +69,7 @@ counters3.forEach(counter => {
 
     const incrementcounter = () => {
         if (count < target) {
-            count++;
+            count += 1;
             counter.innerText = count;
             setInterval(incrementcounter, 400)
         }
@@ -92,12 +92,12 @@ counters4.forEach(counter => {
     let target = counter.getAttribute('data-target');
     console.log(target);
 
-    let inc = target / 100;
+    
     let count = 0
 
     const incrementcounter = () => {
         if (count < target) {
-            count++;
+            count += 1;
             counter.innerText = count;
             setInterval(incrementcounter, 500)
         }
