@@ -8,7 +8,6 @@ counters.forEach(counter => {
     let target = counter.getAttribute('data-target');
     console.log(target);
 
-    let inc = target / 200;
     let count = 0
 
     const incrementcounter = () => {
@@ -36,7 +35,7 @@ counters2.forEach(counter => {
     let target = counter.getAttribute('data-target');
     console.log(target);
 
-    let inc = target / 100;
+    
     let count = 0
 
     const incrementcounter = () => {
