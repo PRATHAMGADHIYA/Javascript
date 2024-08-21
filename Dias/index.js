@@ -1,5 +1,5 @@
-const dice = document.querySelector('.dice');
-const rollBtn = document.querySelector('.roll');
+let dice = document.getElementById('dice');
+let rollbtn=document.getElementById('roll');
 
 
 const randomDice = () => {
@@ -49,4 +49,4 @@ const rollDice = random => {
 }
 
 
-rollBtn.addEventListener('click', randomDice);
+rollbtn.addEventListener('click', randomDice);

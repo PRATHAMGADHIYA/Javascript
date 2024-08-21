@@ -19,7 +19,7 @@ body{
     border-radius: 30px;
     box-shadow: 0px 0px 100px 0px #5dcfd5;
 }
-.dice{
+#dice{
     position: relative;
     width: 100px;
     height: 100px;
@@ -106,7 +106,7 @@ body{
     box-shadow: 25px 25px,
     50px 50px;
 }
-.roll{
+#roll{
     color: #000;
     margin-top: 60px;
     padding: 6px 12px;
@@ -116,7 +116,7 @@ body{
     border: 2px solid #000;
     cursor: pointer;
 }
-.roll:hover{
+#roll:hover{
     color: #fff;
     background: #000;
     transition: all 1s;
