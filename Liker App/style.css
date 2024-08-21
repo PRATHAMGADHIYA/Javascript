@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 1140px;
+    margin: 0 auto;
+}
+i{
+    color: #fff;
+}
+.box{
+    background-color: #000;
+    color: white;
+    width: 500px;
+    height: 500px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0px 20px 20px 20px #000;
+    border-radius: 20px 20px;
+    overflow-x: hidden;
+    margin-top: 50px;
+}
