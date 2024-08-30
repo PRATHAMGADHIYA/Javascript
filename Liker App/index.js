@@ -12,7 +12,7 @@ document.getElementById("counter").addEventListener("click", handlecount);
 let count2 = localStorage.getItem('count2') || 0;
 
 const handlecount2 = (e) => {
-    e.preventDefault();
+       
     count2++;
     document.getElementById('count2').innerHTML = count2;
 
@@ -33,7 +33,7 @@ document.getElementById("counter3").addEventListener("click", handlecount3);
 
 let count4 = sessionStorage.getItem('count4') || 0;
 
-const handlecount4 = (e) => {
+const handlecount4 = (e) => { 
     e.preventDefault();
     count4++;
     document.getElementById('count4').innerHTML = count4;
