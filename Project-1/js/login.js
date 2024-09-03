@@ -12,14 +12,25 @@ const handledata = (e) => {
         password: getValue("#Password")
     };
 
-    let isMatched = users.filter(
-        (ele) => ele.Email == user.Email && ele.Password == user.Password
+    let Matched = users.filter(
+        (ele) => ele.email == user.email && ele.password == user.password
 
     );
 
-    alert('Login Successfully');
-    window.location.href = "/Project-1/index.html";
+    if(Matched.length > 0){
+        alert('Login Successfully');
 
+        localStorage.setItem("username",Matched[0].username)
+
+        localStorage.setItem("password",Matched[0].password)
+
+        localStorage.setItem("isLogin",true)
+
+        window.location.href ="/Project-1/index.html"
+    }
+    else{
+        alert("Login Failed")
+    }
 };
 
 document.querySelector('#userData').addEventListener('submit', handledata);

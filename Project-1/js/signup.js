@@ -2,6 +2,7 @@ import getValue from "../components/helper.js";
 import Navbar from "../components/Navbar.js";
 
 document.getElementById("navbar").innerHTML = Navbar()
+
 let users = JSON.parse(localStorage.getItem('users')) || []
 const handledata = (e) => {
     e.preventDefault();

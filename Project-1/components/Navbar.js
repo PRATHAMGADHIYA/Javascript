@@ -1,4 +1,7 @@
 const Navbar = () => {
+let isLogin = localStorage.getItem('isLogin') || false;
+let username = localStorage.getItem('username')
+
   return`
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
@@ -17,10 +20,10 @@ const Navbar = () => {
             <a class="nav-link" href="/Project-1/pages/cart.html">Cart</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/Project-1/pages/login.html">Login</a>
+            <a class="nav-link" href="/Project-1/pages/login.html">${isLogin ?"Logout" :"Login"}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/Project-1/pages/signup.html">signUp</a>
+            <a class="nav-link" href="/Project-1/pages/signup.html">${isLogin ? username :"signup"}</a>
           </li>
         </ul>
         <form class="d-flex" role="search">
