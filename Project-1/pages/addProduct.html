@@ -13,7 +13,31 @@
 <body>
     <div class="conatiner-fluid">
       <div id="navbar"></div>
-      
+
+      <form  id="productData">
+        <div class="w-75 mx-auto bg-primary p-5 mt-5 rounded-5">
+            <h2 class="justify-content-center d-flex mb-3 text-white">add product</h2>
+            <div class="mt-5">
+              <label class="fs-4 text-white">title:</label>
+                <input type="text" class="form-control m-2" id="title" placeholder="title">
+              </div>
+            <div class="mt-5">
+              <label class="fs-4 text-white">Price:</label>
+                <input type="number" class="form-control m-2" id="price" placeholder="Price">
+                
+              </div>
+              <div class="mt-5">
+                <label class="fs-4 text-white">img url:</label>
+                <input type="src" class="form-control m-2" id="img" placeholder="url">
+              </div>
+
+              <div class="mt-5">
+                <label class="fs-4 text-white">Category:</label>
+                <input type="text" class="form-control m-2" id="category" placeholder="Category">
+              </div>
+              <input type="submit" class="bg-info text-white p-2 mt-5 m-2  w-100 rounded-2"/>
+        </div>
+    </form>
     </div>
 </body>
 <script src="/Project-1/js/addProduct.js" type="module"></script>
