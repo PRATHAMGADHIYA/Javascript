@@ -33,4 +33,8 @@ const handledata = (e) => {
     }
 };
 
+const logout=()=>{
+    
+}
+
 document.querySelector('#userData').addEventListener('submit', handledata);
