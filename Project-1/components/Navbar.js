@@ -34,11 +34,15 @@ let username = localStorage.getItem('username')
                 aria-label="Search"
                 id="search"
               />
+              <button class="form-control bg-primary text-white"
+                type="submit">
+                Search
+                </button>
             </form>
       </div>
     </div>
   </nav>
-  
   `
 }
+
 export default Navbar

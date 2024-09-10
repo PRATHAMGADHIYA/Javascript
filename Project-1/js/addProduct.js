@@ -20,6 +20,7 @@ const handleSubmit = (e) => {
         price: getValue("#price"),
         img: getValue("#img"),
         category: getValue("#category"),
+        id:Date.now()
         
     }
     products.push(product);

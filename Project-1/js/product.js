@@ -12,6 +12,31 @@ if (isLogin == false) {
 
 let products = JSON.parse(localStorage.getItem("products")) || [];
 
+let cart=[]
+
+const Exist =(id)=>{
+    const product = cart.filter((ele) => ele.id == id)
+    if(product.length > 0){
+        alert("product already exists");
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+const handlecart = (ele) => {
+    if(Exist(ele.id)){
+        x``
+    }
+    else{
+        cart.push(ele);
+        alert("Product added to cart");
+    }
+    console.log(cart);
+    
+}
+
 const mapper = (data) => {
     document.getElementById("productlist").innerHTML = ""
     data.map((ele) => {
@@ -21,6 +46,7 @@ const mapper = (data) => {
         let price = createTag("p", ele.price)
         let category = createTag("p", ele.category)
         let BuyBtn = createTag("button","Buy")
+        BuyBtn.addEventListener("click", () => handlecart(ele))
         let div = document.createElement("div")
         div.append(img, title, price, category, BuyBtn)
         document.getElementById("productlist").append(div)
@@ -68,4 +94,4 @@ const search =(e)=>{
     mapper(temp);
 }
 
-document.getElementById("search").addEventListener("submit",search);
+document.getElementById("#search").addEventListener("submit",search);
