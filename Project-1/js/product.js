@@ -1,4 +1,4 @@
-import getValue , { createTag } from "../components/helper.js";
+import getValue, { createTag } from "../components/helper.js";
 import Navbar from "../components/Navbar.js";
 
 document.getElementById("navbar").innerHTML = Navbar()
@@ -12,29 +12,30 @@ if (isLogin == false) {
 
 let products = JSON.parse(localStorage.getItem("products")) || [];
 
-let cart=[]
 
-const Exist =(id)=>{
+let cart = []
+
+const Exist = (id) => {
     const product = cart.filter((ele) => ele.id == id)
-    if(product.length > 0){
+    if (product.length > 0) {
         alert("product already exists");
         return true;
     }
-    else{
+    else {
         return false;
     }
 }
 
 const handlecart = (ele) => {
-    if(Exist(ele.id)){
-        x``
+    if (Exist(ele.id)) {
+
     }
-    else{
+    else {
         cart.push(ele);
         alert("Product added to cart");
     }
     console.log(cart);
-    
+
 }
 
 const mapper = (data) => {
@@ -45,7 +46,7 @@ const mapper = (data) => {
         let title = createTag("h3", ele.title)
         let price = createTag("p", ele.price)
         let category = createTag("p", ele.category)
-        let BuyBtn = createTag("button","Buy")
+        let BuyBtn = createTag("button", "Buy")
         BuyBtn.addEventListener("click", () => handlecart(ele))
         let div = document.createElement("div")
         div.append(img, title, price, category, BuyBtn)
@@ -85,7 +86,7 @@ document.getElementById("womens").addEventListener("click", () => handlecategory
 
 document.getElementById("kids").addEventListener("click", () => handlecategory("kids"));
 
-const search =(e)=>{
+const search = (e) => {
     e.preventDefault();
 
     let searchvalue = getValue("#search");
@@ -94,4 +95,4 @@ const search =(e)=>{
     mapper(temp);
 }
 
-document.getElementById("#search").addEventListener("submit",search);
+document.getElementById("Search").addEventListener("submit", search);
