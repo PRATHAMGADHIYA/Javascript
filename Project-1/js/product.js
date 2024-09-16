@@ -13,27 +13,40 @@ if (isLogin == false) {
 let products = JSON.parse(localStorage.getItem("products")) || [];
 
 
-let cart = []
+let cart=JSON.parse(localStorage.getItem("cart")) || [];
+
 
 const Exist = (id) => {
-    const product = cart.filter((ele) => ele.id == id)
-    if (product.length > 0) {
-        alert("product already exists");
-        return true;
-    }
-    else {
-        return false;
-    }
-}
+    // const product = cart.filter((ele) => ele.id == id)
+    // if (product.length > 0) {
+    //     
+    //     return true;
+    // }
+    // else {
+    //     return false;
+    // }
 
+    let flag = false;
+    cart.map((ele, i) => {
+
+        if (ele.id === id) {
+            cart[i].qty = cart[i].qty + 1
+            flag = true;
+            alert("Product already exists");
+        }
+    })
+    return flag;
+}
 const handlecart = (ele) => {
     if (Exist(ele.id)) {
 
     }
     else {
-        cart.push(ele);
+        cart.push({ ...ele, qty: 1 });
         alert("Product added to cart");
     }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
     console.log(cart);
 
 }
@@ -96,3 +109,11 @@ const search = (e) => {
 }
 
 document.getElementById("Search").addEventListener("submit", search);
+
+document.getElementById("search").addEventListener("keypress", (e) => {
+
+    if (e.key === "Enter") {
+
+    }
+
+});

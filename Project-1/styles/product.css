@@ -9,17 +9,18 @@
 }
 
 #productlist div{
-    background-color:rgb(255, 255, 255);
+    background-color:#fff;
     padding: 20px;
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 20px 0px #02c3d0;
     border-radius: 30px;
+    border: 1px solid #02c3d0;
 }
 
 #productlist button{
     width: 100px;
     padding: 10px;
     border-radius: 10px;
-    background-color: blue;
+    background-color: #02c3d0;
     color: white;
     border: none;
 }
@@ -28,6 +29,19 @@
     border: none;
     width: 300px;
     height: 250px;
+}
+
+#productlist div button{
+    background-color: #fff;
+    color: #02c3d0;
+    border: 1px solid #02c3d0;
+}
+
+#productlist div button:hover{
+    background-color: #02c3d0;
+    color: #fff;
+    transition: all 0.5s;
+    box-shadow: 0px 0px 20px 0px #02c3d0;
 }
 #filter{
     display: flex;
@@ -40,9 +54,15 @@
     width: 100px;
     padding: 10px;
     border-radius: 10px;
-    background-color: blue;
-    color: white;
-    border: none;
+    background-color: #fff;
+    color: #02c3d0;
+    border: 1px solid #02c3d0;
     margin-bottom: 20px;
     margin-left: 20px;
+}
+#filter button:hover{
+    background-color: #02c3d0;
+    color: #fff;
+    transition: all 0.5s;
+    box-shadow: 0px 0px 20px 0px #02c3d0;
 }
