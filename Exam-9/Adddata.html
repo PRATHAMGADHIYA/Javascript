@@ -11,33 +11,41 @@
 </head>
 <body>
 
-    <div class="container-fluid">
+    <div class="container">
         <div id="navbar"></div>
     </div>
-    <form id="studentData">
-        <div >
-          <h2 class="text">Add student data</h2>
-          <div class="mt-5">
+    <form id="studentData" class="w-50 bg- p-5 d-flex mx-auto rounded-3">
+        <div class="w-50 bg-white shadow-lg p-5 rounded-5 d-block mx-auto">
+          <div class="mt-3">
             <label class="label">Name:</label>
-            <input type="text" class="form-control" placeholder="Title">
+            <input type="text" class="form-control" id="name" placeholder="Title">
           </div>
-          <div class="mt-5">
+          <div class="mt-3">
             <label class="label">Age</label>
-            <input type="number" class="form-control" placeholder="Price">
+            <input type="number" class="form-control" id="age" placeholder="Age">
           </div>
-          <div class="mt-5">
+          <div class="mt-3">
             <label class="label">ID</label>
-            <input type="number" class="form-control" placeholder="Student-ID:">
+            <input type="number" class="form-control" id="grid" placeholder="Student-ID:">
           </div>
-          <div class="mt-5">
+          <div class="mt-3">
             <label for="">Email:</label>
-            <input type="email" class="form-control" placeholder="Email:">
+            <input type="email" class="form-control" id="email" placeholder="Email:">
           </div>
-          <div class="mt-5">
+          <label for="" class="mt-3">Course:</label>
+          <div>
+          <select name="" id="course" class="form-control">
+            <option value="" disabled selected class="text-black-50">-Select-</option>
+            <option value="Full-stack">Full-stack</option>
+            <option value="Backend-devlopment">Backend-devlopment</option>
+            <option value="Frontend-devlopment">Frontend-devlopment</option>
+          </select>
+          </div>
+          <div class="mt-3">
             <label for="">Fees:</label>
-            <input type="number" class="form-control" placeholder="Enter the Fees:">
+            <input type="number" class="form-control" id="fee" placeholder="Enter the Fees:">
           </div>
-          <input type="submit" class="btn btn-danger" />
+          <input type="submit" class="btn btn-danger mt-5 mx-auto d-block w-100" />
         </div>
       </form>
 </body>

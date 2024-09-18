@@ -1,0 +1,22 @@
+.main{
+    display: flex;
+    margin-top: 30px;
+    padding: 20px;
+    gap: 20px;
+    background-image:url(../images/bg1.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 85vh;
+}
+.text{
+    color: #000;
+    font-size: 80px;
+}
+.p{
+    color: #fff;
+    font-size: 20px;
+}
+.btn{
+    background-color: #fff;
+    color: #000;
+}
