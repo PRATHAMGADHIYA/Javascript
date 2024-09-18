@@ -8,7 +8,7 @@ let Data = JSON.parse(localStorage.getItem("Data")) || []
 const handedata = (e) => {
     e.preventDefault();
 
-    let data = {
+    let studentdata = {
         name:getValue("#name"),
         age:getValue("#age"),
         grid :getValue("#grid"),
@@ -16,11 +16,11 @@ const handedata = (e) => {
         course:getValue("#course"),
         fee:getValue("#fee")
     }
-    Data.push(data);
+    Data.push(studentdata);
     localStorage.setItem("Data", JSON.stringify(Data));
 }
 
 
 
-document.getElementById("studentData").addEventListener("click", handedata);
+document.getElementById("studentData").addEventListener("submit", handedata);
 

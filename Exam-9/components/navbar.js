@@ -8,15 +8,15 @@ const navbar = () => {
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/Exam-9/index.html">Home</a>
+          <a class="nav-link active" aria-current="page" href="/Exam-9/pages/home.html">Home</a>
         </li> 
         <li class="nav-item">
-          <a class="nav-link" aria-disabled="true" href="/Exam-9/Adddata.html">Add Data</a>
+          <a class="nav-link" aria-disabled="true" href="/Exam-9/pages/Adddata.html">Add Data</a>
         </li>
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+      <form class="d-flex" role="search" id="searching">
+        <input class="form-control me-2" type="search" placeholder="Search" id="search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit" id="search">Search</button>
       </form>
     </div>
   </div>
