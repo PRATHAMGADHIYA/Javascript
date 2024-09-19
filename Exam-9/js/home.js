@@ -33,12 +33,11 @@ const handlesort = (orderby) => {
 
         mapper(temp);
     }
-
 };
 
-const handlecategory = (course) => {
+const handlecategory = (category) => {
 
-    let temp = Data.filter((ele) => ele.course == course);
+    let temp = Data.filter((ele) => ele.course == category);
 
     mapper(temp);
 };
@@ -47,16 +46,15 @@ document.getElementById("lth").addEventListener("click", () => handlesort("lth")
 
 document.getElementById("htl").addEventListener("click", () => handlesort("htl"));
 
-document.getElementById("full-stack").addEventListener("click", () => handlesort("full-stack"));
+document.getElementById("Fullstack").addEventListener("click", () => handlecategory("Fullstack"));
 
-document.getElementById("Backend").addEventListener("click", () => handlesort("Backend"));
+document.getElementById("Backend").addEventListener("click", () => handlecategory("Backend"));
 
-document.getElementById("Frontend").addEventListener("click", () => handlesort("Frontend"));
-
+document.getElementById("Frontend").addEventListener("click", () => handlecategory("Frontend"));
 const search = (e) => {
     e.preventDefault();
 
-    let searchvalue = getValue("searching");
+    let searchvalue = getValue("#search");
     let temp = Data.filter((ele) => ele.name.toLowerCase().includes(searchvalue.toLowerCase()));
 
     mapper(temp);
