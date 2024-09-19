@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar.js";
 
 document.getElementById("navbar").innerHTML = Navbar()
 
+let totalsalary = Number(0)
 let cart = JSON.parse(localStorage.getItem("cart")) || []
 
 const remove = (index) => {
@@ -57,8 +58,10 @@ const mapper = (cart) => {
 
         tr.append(td1, td2, td3, td4, td5, td6)
 
-        document.getElementById("cartitem").append(tr)        
+        document.getElementById("cartitem").append(tr)
     })
+    totalsalary += Number(price)
+        document.getElementById('totalsalary').innerHTML = `Totalsalary:${totalsalary}`
 }
 mapper(cart)
 
