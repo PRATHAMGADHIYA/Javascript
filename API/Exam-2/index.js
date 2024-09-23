@@ -60,6 +60,11 @@ document.getElementById("furniture").addEventListener("click", () => {
     let filtering = productsdata.filter(product => product.category === "furniture");
     displayProducts(filtering);
 });
+
+document.getElementById("groceries").addEventListener("click", () => {
+    let filtering = productsdata.filter(product => product.category === "groceries");
+    displayProducts(filtering);
+});
 document.getElementById("search").addEventListener("keypress", (e) => {
 
     if (e.key === "Enter") {
