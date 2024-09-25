@@ -5,7 +5,7 @@ const getData = async () => {
     let res = await req.json();
     productsdata = res.products; 
     displayProducts(productsdata); 
-}
+} 
 
 getData();
 
@@ -51,7 +51,7 @@ document.getElementById("beauty").addEventListener("click", () => {
     displayProducts(filtering);
 });
 
-document.getElementById("fragrances").addEventListener("click", () => {
+document.getElementById("fragrances").addEventListener("click", () => { 
     let filtering = productsdata.filter(product => product.category === "fragrances");
     displayProducts(filtering);
 });
