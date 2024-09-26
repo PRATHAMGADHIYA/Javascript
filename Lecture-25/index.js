@@ -1,4 +1,4 @@
-const getdata = async (cityName) => {
+const getdata = async (cityName="surat") => {
     let req = await fetch(`https://api.openweathermap.org/data/2.5/weather?appid=f325f171f240c1035ba7d4dce7cf7e40&q=${cityName}&units=metric`);
     let res = await req.json();
 
@@ -38,3 +38,4 @@ const handleLocation = () => {
 handleLocation();
 
 document.getElementById("form").addEventListener("submit", handleweather);
+ getdata()
