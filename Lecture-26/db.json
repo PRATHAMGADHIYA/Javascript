@@ -1,0 +1,74 @@
+{
+  "students": [
+    {
+      "id": "6c20",
+      "name": "Pratham",
+      "email": "example@gmail.com",
+      "number": "9876543210",
+      "course": "Frontend"
+    },
+    {
+      "id": "5b19",
+      "name": "Pratham",
+      "email": "example@gmail.com",
+      "number": "9876543210",
+      "course": "Backend"
+    },
+    {
+      "id": "c073",
+      "name": "js",
+      "email": "example@gmail.com",
+      "number": "9876543210",
+      "course": "Backend"
+    },
+    {
+      "id": "dee4",
+      "name": "Pratham",
+      "email": "example@gmail.com",
+      "number": "9876543210",
+      "course": "Backend"
+    },
+    {
+      "id": "ca90",
+      "name": "Pratham",
+      "email": "example@gmail.com",
+      "number": "9876543210",
+      "course": "Backend"
+    },
+    {
+      "id": "2201",
+      "name": "Pratham",
+      "email": "example@gmail.com",
+      "number": "9876543210",
+      "course": "Backend"
+    },
+    {
+      "id": "c736",
+      "name": "Pratham",
+      "email": "example@gmail.com",
+      "number": "9876543210",
+      "course": "Backend"
+    },
+    {
+      "id": "8fa7",
+      "name": "Pratham",
+      "email": "example@gmail.com",
+      "number": "1234567890",
+      "course": "Backend"
+    },
+    {
+      "id": "f100",
+      "name": "Pratham",
+      "email": "example@gmail.com",
+      "number": "9876543210",
+      "course": "Backend"
+    },
+    {
+      "id": "51e8",
+      "name": "Pratham",
+      "email": "example@gmail.com",
+      "number": "9876543210",
+      "course": "Backend"
+    }
+  ]
+}
