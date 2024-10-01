@@ -1,6 +1,7 @@
 import apimethod from "./components/api.js";
 
 let id = -1;
+
 const add = async (e) => {
     e.preventDefault();
 
@@ -11,15 +12,14 @@ const add = async (e) => {
         course: document.getElementById('course').value,
     };
 
-    await post(user);
-    if (id == -1) {
-        studentdata.post(student);
-    }
-    else {
-        studentdata.patch(id, student);
+    if (id === -1) {
+        await post(user);
+    } else {
+        await apimethod.patch(user, id);
     }
 
-    window.location.reload();
+    await studentdata();
+    
 };
 
 document.getElementById('form').addEventListener('submit', add);
@@ -32,13 +32,13 @@ const deletedData = async (id) => {
     await apimethod.delete(id);
 };
 
-const update = (ele) => {
-    document.getElementById('name').value = ele.name;
-    document.getElementById('email').value = ele.email;
-    document.getElementById('number').value = ele.number;
-    document.getElementById('course').value = ele.course;
-    document.getElementById('update').value = "update"
-    id = ele.id;
+const update = (item) => {
+    document.getElementById('name').value = item.name;
+    document.getElementById('email').value = item.email;
+    document.getElementById('number').value = item.number;
+    document.getElementById('course').value = item.course;
+    document.getElementById('submit').value = "Update";
+    id = item.id;
 }
 
 const studentdata = async () => {
@@ -46,7 +46,7 @@ const studentdata = async () => {
 
     document.getElementById('dlp').innerHTML = '';
 
-    users.map((item,ele) => {
+    users.map((item) => {
         let div = document.createElement('div');
         div.className = 'student';
 
@@ -67,7 +67,7 @@ const studentdata = async () => {
 
         let btn2 = document.createElement('button');
         btn2.innerHTML = 'Update';
-        btn2.addEventListener('click', () => update(item))
+        btn2.addEventListener('click', () => update(item));
 
         btn.addEventListener('click', async () => {
             await deletedData(item.id);
