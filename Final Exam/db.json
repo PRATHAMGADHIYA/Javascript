@@ -1,3 +1,12 @@
 {
-    "Questions": []
+    "Questions": [
+        {
+            "questions":"What is javascript",
+            "option1":"A programming language",
+            "option2":"A library",
+            "option3":"A framework",
+            "option4":"A language used for web development",
+            "answer":"A programming language"
+        }
+    ]
 }
