@@ -12,7 +12,9 @@ if (isLogin == false) {
 
 let products = JSON.parse(localStorage.getItem("products")) || [];
 
-const handleSubmit = (e) => {
+
+const handleSubmit = async(e) => {
+    let data = await methods.get();
     e.preventDefault();
 
     let product = {
@@ -21,7 +23,7 @@ const handleSubmit = (e) => {
         img: document.getElementById('img').value,
         category: document.getElementById('category').value
     }
-    products.push(product);
+    await products.push(product);
     localStorage.setItem("products", JSON.stringify(products));
 
 };

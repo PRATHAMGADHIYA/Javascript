@@ -1,11 +1,11 @@
 const methods = {
     get: async () => {
-        let req = await fetch(`https://json-server-5-0cwx.onrender.com/Product`);
+        let req = await fetch(`http://localhost:3000/Product`);
         let res = await req.json();
         return res;
     },
     post: async (products) => {
-        let req = await fetch(`https://json-server-5-0cwx.onrender.com/Product`, {
+        let req = await fetch(`http://localhost:3000/Product`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -16,7 +16,7 @@ const methods = {
         return res;
     },
     patch: async (products,id) => {
-        let req = await fetch(`https://json-server-5-0cwx.onrender.com/Product`,{
+        let req = await fetch(`http://localhost:3000/Product`,{
             method:'PATCH',
             headers:{
                 'content-type': 'application/json'
@@ -27,7 +27,7 @@ const methods = {
         return res;
     },
     delete: async (id) => {
-        let req = await fetch(`https://json-server-5-0cwx.onrender.com/Product`,{
+        let req = await fetch(`http://localhost:3000/Product`,{
             method:'DELETE',
         });
         let res= await req.json();

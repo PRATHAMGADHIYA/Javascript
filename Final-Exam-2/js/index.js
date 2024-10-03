@@ -5,12 +5,12 @@ document.getElementById('navbar').innerHTML= navbar();
 
 let products = JSON.parse(localStorage.getItem("products")) || [];
 
-
 const deletedData = async (id) => {
     await methods.delete(id);
 };
 
-const mapper = async (data) => {
+const mapper = async () => {
+    let data = await methods.get();
     document.getElementById("productlist").innerHTML = ""
         data.map((ele) => {
             let div = document.createElement('div');
@@ -67,8 +67,8 @@ document.getElementById("lth").addEventListener("click", () => handlesort("lth")
 
 document.getElementById("htl").addEventListener("click", () => handlesort("htl"));
 
-document.getElementById("School-Bag").addEventListener("click", () => handlecategory("School-Bag"));
+document.getElementById("Shoes").addEventListener("click", () => handlecategory("Shoes"));
 
-document.getElementById("Suitcase").addEventListener("click", () => handlecategory("Suitcase"));
+document.getElementById("nike").addEventListener("click", () => handlecategory("nike"));
 
-document.getElementById("Laptop-Bag").addEventListener("click", () => handlecategory("Laptop-Bag"));
+document.getElementById("jorden").addEventListener("click", () => handlecategory("jorden"));
