@@ -1,12 +1,12 @@
-import getValue from "../components/helper.js";
-import Navbar from "../components/Navbar.js";
+import navbar from "../components/navbar.js";
 
-document.getElementById("navbar").innerHTML = Navbar()
+document.getElementById('navbar').innerHTML= navbar();
+
 
 let isLogin = localStorage.getItem("isLogin") || false;
 
 if (isLogin == false) {
-    window.location.href = "/Project-1/pages/login.html"
+    window.location.href = "/Final-Exam-2/pages/login.html"
 }
 
 
@@ -16,11 +16,10 @@ const handleSubmit = (e) => {
     e.preventDefault();
 
     let product = {
-        title: getValue("#title"),
-        price: getValue("#price"),
-        img: getValue("#img"),
-        category: getValue("#category"),
-        
+        title:document.getElementById('title').value,
+        price: document.getElementById('price').value,
+        img: document.getElementById('img').value,
+        category: document.getElementById('category').value
     }
     products.push(product);
     localStorage.setItem("products", JSON.stringify(products));
