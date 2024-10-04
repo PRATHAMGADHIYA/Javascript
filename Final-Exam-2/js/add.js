@@ -1,6 +1,6 @@
 import navbar from "../components/navbar.js";
 
-document.getElementById('navbar').innerHTML= navbar();
+document.getElementById('navbar').innerHTML = navbar();
 
 
 let isLogin = localStorage.getItem("isLogin") || false;
@@ -13,12 +13,12 @@ if (isLogin == false) {
 let products = JSON.parse(localStorage.getItem("products")) || [];
 
 
-const handleSubmit = async(e) => {
+const handleSubmit = async (e) => {
     let data = await methods.get();
     e.preventDefault();
 
     let product = {
-        title:document.getElementById('title').value,
+        title: document.getElementById('title').value,
         price: document.getElementById('price').value,
         img: document.getElementById('img').value,
         category: document.getElementById('category').value

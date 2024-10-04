@@ -1,7 +1,7 @@
 import navbar from "../components/navbar.js";
 import methods from "../components/api.js";
 
-document.getElementById('navbar').innerHTML= navbar();
+document.getElementById('navbar').innerHTML = navbar();
 
 let products = JSON.parse(localStorage.getItem("products")) || [];
 
@@ -12,33 +12,33 @@ const deletedData = async (id) => {
 const mapper = async () => {
     let data = await methods.get();
     document.getElementById("productlist").innerHTML = ""
-        data.map((ele) => {
-            let div = document.createElement('div');
-            div.className = 'product';
-    
-            let title = document.createElement('h2');
-            title.innerHTML = ele.title;
-    
-            let price = document.createElement('h3');
-            price.innerHTML = ele.price;
-    
-            let img = document.createElement('img');
-            img.src = ele.img;
-    
-            let category = document.createElement('p');
-            category.innerHTML = ele.category;
-    
-            let btn = document.createElement('button');
-            btn.innerHTML = 'Delete';
+    data.map((ele) => {
+        let div = document.createElement('div');
+        div.className = 'product';
 
-            btn.addEventListener('click', async () => {
-                await deletedData(ele.id);
-                await mapper();
-            });
-    
-            div.append(img,title,price,category, btn);
-            document.getElementById('productlist').append(div);
+        let title = document.createElement('h2');
+        title.innerHTML = ele.title;
+
+        let price = document.createElement('h3');
+        price.innerHTML = ele.price;
+
+        let img = document.createElement('img');
+        img.src = ele.img;
+
+        let category = document.createElement('p');
+        category.innerHTML = ele.category;
+
+        let btn = document.createElement('button');
+        btn.innerHTML = 'Delete';
+
+        btn.addEventListener('click', async () => {
+            await deletedData(ele.id);
+            await mapper();
         });
+
+        div.append(img, title, price, category, btn);
+        document.getElementById('productlist').append(div);
+    });
 }
 
 await mapper(products);
