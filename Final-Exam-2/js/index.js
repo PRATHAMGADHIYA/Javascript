@@ -10,6 +10,7 @@ const deletedData = async (id) => {
 };
 
 const mapper = async () => {
+    
     let data = await methods.get();
     document.getElementById("productlist").innerHTML = ""
     data.map((ele) => {
@@ -23,7 +24,7 @@ const mapper = async () => {
         price.innerHTML = ele.price;
 
         let img = document.createElement('img');
-        img.src = ele.img;
+        img.src = ele.image;
 
         let category = document.createElement('p');
         category.innerHTML = ele.category;
@@ -71,4 +72,4 @@ document.getElementById("Shoes").addEventListener("click", () => handlecategory(
 
 document.getElementById("nike").addEventListener("click", () => handlecategory("nike"));
 
-document.getElementById("jorden").addEventListener("click", () => handlecategory("jorden"));
+document.getElementById("jorden").addEventListener("click", () => handlecategory("jorden"));    
